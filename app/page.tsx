@@ -59,7 +59,7 @@ export default function Home() {
             style={textBox}
           >
           <p className="max-w-[700px] text-left text-foreground/70">
-            Hi, I'm Cassandra Dias. I am a computer science student studying at the University of Toronto. I love developing web applications, video games and learning about new technologies. This is my personal website where I will be sharing my projects!
+            Hi, I&apos;m Cassandra Dias. I am a computer science student studying at the University of Toronto. I love developing web applications, video games and learning about new technologies. This is my personal website where I will be sharing my projects!
           </p>
         </motion.div>
       </main>
