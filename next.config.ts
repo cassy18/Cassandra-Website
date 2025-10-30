@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  basePath: "/Cassandra-Website",
+  basePath: "/cass-website",
   output: "export",
   reactStrictMode: true,
 };
