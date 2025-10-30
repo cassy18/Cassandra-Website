@@ -110,13 +110,15 @@ function Carousel({
     }, [current, projects.length]);
 
     const project = projects[current];
+    const basePath = process.env.NODE_ENV === "production" ? "/Cassandra-Website" : "";
 
     return (
         <div className="flex flex-col items-center py-6">
             <div className="border border-foreground/50 dark:bg-background rounded-xl shadow-lg p-6 w-full max-w-md">
                 <h3 className="text-xl font-bold mb-2 text-center">{project.title}</h3>
                 <img
-                    src={project.img}
+                    // src={project.img}
+                    src={`${basePath}/${project.img}`}
                     alt={project.title}
                     className="w-full h-full object-cover rounded-lg mb-4 border border-foreground/10"
                 />
