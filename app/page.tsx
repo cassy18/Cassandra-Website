@@ -27,6 +27,9 @@ export default function Home() {
     maxWidth: "700px",
     margin: "0 20px",
   }
+
+  const basePath = process.env.NODE_ENV === "production" ? "/Cassandra-Website" : "";
+
   return (
     <div className="">
       <Header />
@@ -47,7 +50,7 @@ export default function Home() {
             whileHover={{ scale: 1.5 }}
             whileTap={{ scale: 1.2 }}
             transition={{ type: "spring" }}
-            src="/profile.jpg"
+            src={`${basePath}/profile.jpg`}
             alt="Cassandra Dias"
             className="w-32 h-32 rounded-full"
             style={photoBG}
