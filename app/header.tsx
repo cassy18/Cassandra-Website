@@ -1,12 +1,20 @@
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 export default function Header() {
-    return (
-        <header className="flex justify-between items-center p-6 border-b border-foreground/10">
-        <ol className="flex gap-6">
-          <li className="hover:underline hover:underline-offset-4"><Link href="/">Home</Link></li>
-          <li className="hover:underline hover:underline-offset-4"><Link href="/projects">Projects</Link></li>
-        </ol>
-      </header>
-    );
+  const pathname = usePathname();
+  const isActive = (href: string) => pathname === href;
+
+  return (
+    <header className="flex justify-between items-center p-6 border-b border-foreground/10">
+      <ol className="flex gap-6">
+        <li className={`p-2 hover:underline hover:underline-offset-4 ${isActive('/') ? 'rounded bg-[var(--primary)] font-bold' : ''}`}>
+          <Link href="/">Home</Link>
+        </li>
+        <li className={`p-2 hover:underline hover:underline-offset-4 ${isActive('/projects') ? 'rounded bg-[var(--primary)] font-bold' : ''}`}>
+          <Link href="/projects">Projects</Link>
+        </li>
+      </ol>
+    </header>
+  );
 }

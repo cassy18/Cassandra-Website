@@ -49,8 +49,8 @@ function Content() {
   ];
     return (
         <div className="p-6">
-            <h1 className="text-3xl font-bold mb-4 text-center">Projects</h1>
-            <p className="text-center text-foreground/70">Here are some of my projects!</p>
+            <h1 className="underline text-3xl font-bold text-center">Projects</h1>
+            <p className="p-2 border-b border-[var(--tertiary)] text-center text-foreground/70">Here are some of my projects!</p>
             <div className="mt-8 space-y-6">
                 {project_card("Web Development", "A collection of web applications I've built using React, Next.js, and other modern web technologies.", webDevProjects)}
                 {project_card("Game Development", "A showcase of video games I've developed using Unity and Unreal Engine, ranging from 2D platformers to 3D adventures.", gameDevProjects)}
@@ -113,11 +113,10 @@ function Carousel({
     const basePath = process.env.NODE_ENV === "production" ? "/Cassandra-Website" : "";
 
     return (
-        <div className="flex flex-col items-center py-6">
+        <div className="flex flex-col items-center p-6">
             <div className="border border-foreground/50 dark:bg-background rounded-xl shadow-lg p-6 w-full max-w-md">
                 <h3 className="text-xl font-bold mb-2 text-center">{project.title}</h3>
                 <img
-                    // src={project.img}
                     src={`${basePath}/${project.img}`}
                     alt={project.title}
                     className="w-full h-full object-cover rounded-lg mb-4 border border-foreground/10"

@@ -33,7 +33,7 @@ export default function Home() {
   return (
     <div className="">
       <Header />
-      <main className="row-start-2 flex flex-col items-center justify-center gap-10 text-center">
+      <main className="row-start-2 flex flex-col items-center justify-center gap-10 text-center mb-4">
         <motion.div
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -67,10 +67,12 @@ export default function Home() {
         </motion.div>
       </main>
       <div className="text-foreground/70 p-6 flex flex-col items-center wrap-content">
-          <h1 className="text-2xl font-bold mb-4">Resume</h1>
+          <h1 className="text-2xl font-bold">Resume</h1>
           <Resume />
       </div>
-      <p>Check out my projects <a href="/projects" className="underline hover:text-foreground">here</a>!</p>
+      <footer className="border-t border-foreground/10 p-2 text-center bg-[var(--tertiary)]">
+        <p>Check out my projects <a href="/projects" className="underline hover:text-foreground">here</a>!</p>
+      </footer>
     </div>
   );
 }
