@@ -2,6 +2,7 @@
 import * as motion from "motion/react-client"
 import Header from "./header";
 import Resume from "@/public/Resume";
+import Link from "next/dist/client/link";
 
 export default function Home() {
   const box = {
@@ -70,8 +71,8 @@ export default function Home() {
           <h1 className="text-2xl font-bold">Resume</h1>
           <Resume />
       </div>
-      <footer className="border-t border-foreground/10 p-2 text-center bg-[var(--tertiary)]">
-        <p>Check out my projects <a href="/projects" className="underline hover:text-foreground">here</a>!</p>
+      <footer className="border-t p-2 text-center bg-[var(--tertiary)]">
+        <p>Check out my projects <Link className="underline" href="/projects">Projects</Link>!</p>
       </footer>
     </div>
   );
